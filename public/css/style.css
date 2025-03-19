@@ -1,0 +1,129 @@
+body, html {
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+.scroll-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1.5s ease-in-out;
+    scroll-snap-align: start;
+    position:relative;
+}
+img#backgroundImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* z-index: 0; */
+  opacity: 0;
+}
+img#backgroundImg.fade-in-image {
+  opacity: 1;
+  transition: opacity 5s ease-in-out;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    animation: mask 8s infinite
+}
+@keyframes mask {
+  0%, 100% {
+    opacity: 1
+  }
+  20%, 80% {
+    opacity: 0
+  }
+}
+
+.content {
+    color: #333333;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.hero {
+  background: #ffffff99;
+  width: 100%;
+  padding: 40px 0;
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s ease-out 1s;
+}
+.button {
+    background: #ff7f50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+    text-decoration-line: none;
+    display: inline-block;
+}
+button:hover {
+    background: #ff4500;
+}
+
+#scroll-down {
+  position: absolute;
+  bottom: 8px;
+  margin: auto;
+  line-height: 48px;
+  z-index: 6;
+}
+#scroll-down:active {
+  opacity: 0.5;
+  transform: translateY(4px);
+}
+#scroll-up {
+  position: absolute;
+  top: 8px;
+  margin: auto;
+  line-height: 48px;
+  z-index: 6;
+}
+#scroll-up:active {
+  opacity: 0.5;
+  transform: translateY(-4px);
+}
+#invitation {
+  width: 90%;
+  margin: auto;
+  padding: 16px;
+  border: 1px #333333 solid;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #ffffff99;
+  margin-bottom: 32px;
+}
+#farewell {
+  width: 90%;
+  margin: auto;
+  padding: 16px;
+  border: 1px #333333 solid;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #ffffff99;
+  margin-bottom: 32px;
+
+}
