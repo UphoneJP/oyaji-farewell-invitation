@@ -30,7 +30,7 @@ img#backgroundImg {
 }
 img#backgroundImg.fade-in-image {
   opacity: 1;
-  transition: opacity 5s ease-in-out;
+  transition: opacity 3s ease-in-out;
 }
 
 #overlay {
@@ -40,13 +40,13 @@ img#backgroundImg.fade-in-image {
     width: 100%;
     height: 100%;
     background: #ffffff;
-    animation: mask 8s infinite
+    animation: mask 10s infinite
 }
 @keyframes mask {
-  0%, 100% {
+  0%, 10%, 100% {
     opacity: 1
   }
-  20%, 80% {
+  25%, 80% {
     opacity: 0
   }
 }
@@ -86,7 +86,7 @@ button:hover {
 
 #scroll-down {
   position: absolute;
-  bottom: 8px;
+  bottom: 32px;
   margin: auto;
   line-height: 48px;
   z-index: 6;
@@ -97,7 +97,7 @@ button:hover {
 }
 #scroll-up {
   position: absolute;
-  top: 8px;
+  top: 32px;
   margin: auto;
   line-height: 48px;
   z-index: 6;

@@ -4,8 +4,21 @@ const images = [
   "public/pictures/3.jpg",
   "public/pictures/4.jpg",
   "public/pictures/5.jpg",
-  "public/pictures/6.jpg"
+  "public/pictures/6.jpg",
+  "public/pictures/7.jpg",
+  "public/pictures/8.jpg",
+  "public/pictures/9.jpg"
 ];
+
+function setFullHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+// 初期設定
+setFullHeight();
+// ウィンドウリサイズ時にも再設定
+window.addEventListener('resize', setFullHeight);
+
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -15,14 +28,23 @@ document.addEventListener("DOMContentLoaded", function() {
     content.classList.add('fade-in')
   })
   
+  // 背景画像切り替え
   function changeBackground() {
     const backgroundImg = document.querySelector("#backgroundImg");
     const index = Math.floor(Math.random() * images.length);
     backgroundImg.src = images[index];
     backgroundImg.classList.add('fade-in-image');
   }
-  setInterval(changeBackground, 8000);
+  setInterval(changeBackground, 10000);
   changeBackground();
+
+  // 紹介動画
+  const movieModal = document.getElementById('movieModal');
+  const video = document.getElementById('introVideo');
+  movieModal.addEventListener('hide.bs.modal', function () {
+      video.pause();
+      video.currentTime = 0;
+  });
 });
 
 document.addEventListener("wheel", function(event) {

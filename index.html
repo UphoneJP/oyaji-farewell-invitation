@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>調布大塚小学校おやじの会</title>
-    <link rel="stylesheet" href="public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="public/js/script.js"></script>
+    
 </head>
 <body>
   <img id="backgroundImg" alt="背景画像">
   <div id="overlay"></div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="movieModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center" style="background: rgb(14, 145, 215);">
+          <video id="introVideo" class="m-auto" width="320" height="550" controls>
+            <source src="./public/pictures/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div>
+            <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
   <section class="scroll-section">
     <div class="content hero">
-      <h1>調布大塚小学校 おやじの会</h1>
+      <h1 style="font-weight: bold; margin-bottom: 16px;">調布大塚小学校 おやじの会</h1>
       <p>ご入学おめでとうございます</p>
       <p>こどもを見守りながら</p>
       <p>とことん楽しむ有志の会です</p>
-      <p>ご参加をお待ちしています</p>
+      <p>一緒に遊べる仲間を待っています</p>
     </div>
     <div style="padding: 64px;"> </div>
     <div id="scroll-down">
@@ -35,21 +55,26 @@
     <div class="content">
 
       <div id="farewell">
-        <h2>新入生歓迎会</h2>
-        <p style="margin: 0;">日時: 2024/04/20(日)09:30~11:30</p>
+        <h2 style="font-weight: bold; margin-bottom: 32px;">新入生歓迎会</h2>
+        <p style="margin: 0;">日時: 2024/04/20(日)10:15~11:45</p>
+        <p style="margin: 0;">（10:00 受付開始）</p>
         <p style="margin: 0;">集合場所: 西門すぐのDルーム</p>
         <p style="margin: 0;">内容: 校内で宝探しゲーム等</p>
-        <p>是非ご参加ください!!</p>
+        <p style="margin-top: 16px;">是非ご家族でご参加ください!!</p>
         <a href="" class="button">参加申込フォームへ</a>
       </div>
 
       <div id="invitation">
-        <p>おやじの会では連絡手段としてグループコミュニケーションアプリ<a href="https://about.band.us/jp" target="_blank">BAND</a>を利用しています。LINEも運営しているNAVER Corporationのアプリです。登録は簡単です。子どもと一緒に遊びたい人は是非ご入会ください!!</p>
-        <a href="https://band.us/n/aba30303S1U79" class="button">おやじの会へ入会</a>
-      </div>
+        <p class="text-start m-0">おやじの会での一年間の活動内容を動画しました。こども達は特別感を感じるようで、いつもくっついてきて親と一緒に楽しんでいます。少しでも興味を持ってもらえたら嬉しいです。</p>
+        <button type="button" class="button" style="background-color: rgb(14, 145, 215);" data-bs-toggle="modal" data-bs-target="#movieModal">
+          おやじの会 紹介Movie
+        </button>
+        <p class="text-start" style="margin: 32px 0 0;">おやじの会ではグループコミュニケーションアプリ<a href="https://about.band.us/jp" target="_blank">BAND</a>を利用しています。アプリインストール後に是非ご登録ください!!</p>
+        <p class="m-0">【 入会(登録)無料・入退会自由 】</p>
+        <a href="https://band.us/n/aba30303S1U79" class="button">おやじの会へ入会(登録)</a>
+      </div>    
       
     </div>
   </section>
-
 </body>
 </html>
