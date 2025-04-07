@@ -97,7 +97,7 @@ button:hover {
 }
 #scroll-up {
   position: absolute;
-  top: 32px;
+  top: 16px;
   margin: auto;
   line-height: 48px;
   z-index: 6;
@@ -124,6 +124,6 @@ button:hover {
   border-radius: 8px;
   box-sizing: border-box;
   background-color: #ffffff99;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 
 }
