@@ -29,9 +29,14 @@ document.addEventListener("DOMContentLoaded", function() {
   })
   
   // 背景画像切り替え
+  let lastIndex = 0;
   function changeBackground() {
     const backgroundImg = document.querySelector("#backgroundImg");
-    const index = Math.floor(Math.random() * images.length);
+    let index = 1;
+    while(lastIndex === index){
+      index = Math.floor(Math.random() * images.length);
+    }
+    lastIndex = index;
     backgroundImg.src = images[index];
     backgroundImg.classList.add('fade-in-image');
   }
