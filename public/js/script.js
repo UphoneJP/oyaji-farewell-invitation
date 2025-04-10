@@ -20,6 +20,8 @@ setFullHeight();
 window.addEventListener('resize', setFullHeight);
 
 
+let lastIndex = 0;
+let index = 5;
 document.addEventListener("DOMContentLoaded", function() {
 
   // 文字のフェードイン
@@ -29,10 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
   })
   
   // 背景画像切り替え
-  let lastIndex = 0;
   function changeBackground() {
     const backgroundImg = document.querySelector("#backgroundImg");
-    let index = 1;
     while(lastIndex === index){
       index = Math.floor(Math.random() * images.length);
     }
